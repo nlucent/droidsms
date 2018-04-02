@@ -1,0 +1,27 @@
+<html>
+<body>
+    <div id="table">
+	<table border="1" align="center">
+            <tr>
+                <td colspan="4" align="center">All Messages</td>
+            </tr>
+            <tr>
+                <td>Date</td>
+                <td>Sender</td>
+                <td>Message</td>
+                <td>Delete</td>
+            </tr>
+{% for row in rows %}
+            <tr>
+                <td><a title="{{row.time}}" href='/date/{{row.date}}'>{{row.date}}</a>  </td>
+                <td><a title="{{row.number}}" href='/sender/{{row.sender}}'>{{row.sender}}</a> </td>
+                <td>{{row.message}}</td>
+                <td><a href='/delete/{{row['_id']}}'>X</a></td>
+            </tr>
+            <p>
+        </div>
+{%endfor %}
+    
+    </div>
+</body>
+</html>

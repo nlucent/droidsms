@@ -1,0 +1,35 @@
+<html>
+<body>
+	<form name="newMessageForm" action="/new" method="post">
+		<p>
+		Date: <input type="text" name="newdate" />		
+		Time: <input type="text" name="newtime" /> <p>
+		Sender: <input type="text" name="newsender" /> 	
+		Number: <input type="text" name="newnumber" /> <p>
+		Message: <input type="text" name="newmessage" /> <p>
+		<input type="submit" name="submit" value="Submit" />
+	</form>
+	<script type='text/javascript'>
+	<!--
+
+	//-->
+	</script>
+	<script type='text/javascript'>
+		<!--
+		// Assign date and time values, then disable fields
+		var now = new Date()
+		var month = now.getMonth() + 1
+		var day = now.getDate()
+		var year = now.getYear() + 1900
+		var hours = now.getHours()
+		var minutes = now.getMinutes()
+		if (minutes < 10) { minutes = "0" + minutes	}
+		if (hours == 0) { hours = 12 }
+
+		document.newMessageForm.newdate.value = month + "-" + day + "-" + year
+		document.newMessageForm.newtime.value = hours + ":" + minutes
+
+		//-->
+	</script>
+</body>
+</html>

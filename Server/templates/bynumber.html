@@ -1,0 +1,23 @@
+<html>
+<body>
+	<table border="1" align="center">
+            <tr>
+                <td colspan="4" align="center">All Messages from {{number}}</td>
+            </tr>
+            <tr>
+                <td>Date</td>
+                <td>Sender</td>
+                <td>Message</td>
+            </tr>
+{%if rows %}
+{%for row in rows %}
+
+            <tr>
+            	<td>{{row.date}}</td>
+                 <td>{{row.sender}}</td>
+                <td>{{row.message}}</td>
+            </tr>
+{%endfor %}
+{%endif%}
+</body>
+</html>

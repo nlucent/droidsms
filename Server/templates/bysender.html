@@ -1,0 +1,22 @@
+<html>
+<body>
+	<table border="1" align="center">
+            <tr>
+                <td colspan="4" align="center">All Messages from {{sender}}</td>
+            </tr>
+            <tr>
+                <td>Date</td>
+                <td>Number</td>
+                <td align="center" width="75%">Message</td>
+            </tr>
+{%if rows %}
+{%for row in rows %}
+            <tr>
+            	<td><a title="{{row.time}}" href='/date/{{row.date}}'>{{row.date}}</a></td>
+                 <td><a href='/number/{{row.number}}'>{{row.number}}</a></td>
+                <td>{{row.message}}</td>
+            </tr>
+{%endfor %}
+{%endif%}
+</body>
+</html>
